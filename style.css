@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+img, picture, video, svg, canvas{
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+body{
+  font-size: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav img{
+  width: 4rem;
+  margin: auto;
+  margin-block: 0 2rem;
+}
+
+main{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.heading{
+  display: grid;
+  gap: 1rem;
+}
+.sub_heading{
+  font-weight: 300;
+  color: var(--gray);
+}
+.sub_heading span{
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+.sub_heading + p{
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--very-dark-blue);
+}
+form{
+  display: grid;
+  gap: 0.5rem;
+  width: 90%;
+  margin: auto;
+}
+[type="email"]{
+  color: var(--very-dark-blue);
+  outline: none;
+  border: 1px solid var(--pale-blue);
+  border-radius: 100vmax;
+  padding: 0.6rem 0.75rem;
+}
+[type="email"]::placeholder{
+  font-weight: 300;
+  color: var(--pale-blue);
+}
+.inval{
+  border: 1px solid var(--light-red);
+}
+.error{
+  font-size: 0.8rem;
+  color: var(--light-red);
+  transform: translateY(-0.2rem);
+  display: none;
+}
+.btn{
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 0 0.2rem var(--pale-blue);
+  outline: none;
+  border: none;
+  border-radius: 100vmax;
+}
+.fade{
+  background-color: hsl(227, 87%, 69%);
+}
+picture img{
+  margin-block: 3rem 9rem;
+}
+
+footer{
+  margin-block: 5rem 0;
+}
+.socials{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.socials i{
+  color: var(--blue);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+}
+.socials + p{
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-block: 1rem;
+}
+
+@media(min-width: 600px){
+  form{
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+:root{
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --white: hsl(220, 0%, 100%);
+}
